@@ -2,6 +2,7 @@
 package actividad_1;
 
 import POJO.numeros;
+import POJO.palabras;
 import java.util.Scanner;
 
 public class Actividad_1 {
@@ -10,7 +11,7 @@ public class Actividad_1 {
         Scanner sc = new Scanner(System.in);
         int opcion;
         do{
-            System.out.println("introduce una opcion: \nOpcion 1: numeros hasta introducir un negativo\nOpcion 2: tabla de multiplicar\nOpcion 3: contraseña");
+            System.out.println("introduce una opcion: \nOpcion 1: numeros hasta introducir un negativo\nOpcion 2: tabla de multiplicar\nOpcion 3: contraseña\nOpcion 4: Palindromo");
             opcion= sc.nextInt();
             switch(opcion){
                 case 0:
@@ -33,13 +34,25 @@ public class Actividad_1 {
                     System.out.println("introduce 2 digitos:\n");
                     n1=sc.nextInt();
                     n2=sc.nextInt();
-                    eje2.set_num(n1);
-                    eje2.set_num1(n2);
+                    eje2.set_num(n2);
+                    eje2.set_num1(n1);
                     eje2.tabla();
                     break;
                 case 3:
                     numeros eje3=new numeros();
                     eje3.contaseña();
+                    break;
+                case 4:
+                    palabras eje4 =new palabras();
+                    String palabra1;
+                    String palabra=null;
+                    System.out.println("Introduce una palabra:");
+                    palabra1=sc.nextLine();
+                    palabra=sc.nextLine();
+                    eje4.set_palabra(palabra);
+                    eje4.palindromo();
+                    
+                    
                     break;
                 default :
                     System.out.println("Opcion invalida");

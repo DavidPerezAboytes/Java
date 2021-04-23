@@ -22,8 +22,11 @@ public class numeros {
         }
     }
     public void tabla(){
-        for (int i=0;i<num1;i++){
-            System.out.println(num+"x"+(i+1)+"="+num*(i+1));
+        for (int i=1;i<=num1;i++){
+            for(int j=1;j<=num;j++){
+                System.out.println(i+"x"+j+"="+i*j);
+            }
+            System.out.println();
         }
     }
     public void contaseña(){
