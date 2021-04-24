@@ -4,6 +4,7 @@ package actividad_1;
 import POJO.numeros;
 import POJO.palabras;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Actividad_1 {
 
@@ -11,7 +12,12 @@ public class Actividad_1 {
         Scanner sc = new Scanner(System.in);
         int opcion;
         do{
-            System.out.println("introduce una opcion: \nOpcion 1: numeros hasta introducir un negativo\nOpcion 2: tabla de multiplicar\nOpcion 3: contraseña\nOpcion 4: Palindromo");
+            System.out.println("introduce una opcion: "
+                    + "\nOpcion 1: numeros hasta introducir un negativo"
+                    + "\nOpcion 2: tabla de multiplicar"
+                    + "\nOpcion 3: contraseña"
+                    + "\nOpcion 4: Palindromo"
+                    + "\nOpcion 5: conversion de grados ");
             opcion= sc.nextInt();
             switch(opcion){
                 case 0:
@@ -44,16 +50,35 @@ public class Actividad_1 {
                     break;
                 case 4:
                     palabras eje4 =new palabras();
-                    String palabra1;
-                    String palabra=null;
-                    System.out.println("Introduce una palabra:");
-                    palabra1=sc.nextLine();
-                    palabra=sc.nextLine();
+                    
+                    String palabra;
+                    //System.out.println("Introduce una palabra:");
+                    //palabra=sc.next();
+                    palabra=JOptionPane.showInputDialog("Introduce una palabra:");
                     eje4.set_palabra(palabra);
                     eje4.palindromo();
-                    
-                    
                     break;
+                case 5:
+                    numeros gra = new numeros();
+                    System.out.println("Introdusca los grados:");
+                    double grados;
+                    grados=sc.nextInt();
+                    gra.set_gra(grados);
+                    int opcion1;
+        do{
+            System.out.println("introduce una opcion: "
+                    + "\nOpcion 1: C° a F°"
+                    + "\nOpcion 2: F° a C°"
+                    + "\nOpcion 3: F° a K"
+                    + "\nOpcion 4: K  a F°"
+                    + "\nOpcion 5: C° a K"
+                    + "\nOpcion 6: K  a C°");
+            opcion1= sc.nextInt();
+            gra.set_num1(opcion1);
+            gra.grados();
+        }while (opcion1!=0);
+                    break;
+                    
                 default :
                     System.out.println("Opcion invalida");
                     break;
