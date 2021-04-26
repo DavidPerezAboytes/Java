@@ -101,5 +101,50 @@ public class numeros {
                     break;
         }
     }
+    public void arreglo(){
+        Random rnd=new Random();
+        int arr[] = new int [10];
+        for (int y=0; y<10;y++){
+            int n=rnd.nextInt(1000);
+            arr[y]=n;
+        }
+        
+        int aux=0;
+        for (int x=0;x<10;x++){
+            if (arr[x]==num){
+                aux=1;
+            }}
+            if (aux==1)
+                System.out.println("el numero esta en el arreglo"); 
+            else
+                System.out.println("el numero No esta en el arreglo");
+        }
+    public void burbuja (){
+        Random rnd=new Random();
+        int arr[] = new int [10];
+        for (int y=0; y<10;y++){
+            int n=rnd.nextInt(1000);
+            arr[y]=n;
+        }
+        for (int y=0; y<10;y++){
+            System.out.print(arr[y]+"\t");
+        }
+        System.out.println();
+        int aux=0;
+        for (int i=1;i<10;i++){
+            for (int j=0;j<10;j++){
+                if (arr[j]>arr[i]){
+                  aux=arr[i];
+                  arr[i]=arr[j];
+                  arr[j]=aux;
+                }
+            }
+        }
+        for (int y=0; y<10;y++){
+            System.out.print(arr[y]+"\t");
+        }
+        System.out.println();
+    }
+    }
     
-}
+

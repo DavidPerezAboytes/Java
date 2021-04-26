@@ -17,7 +17,9 @@ public class Actividad_1 {
                     + "\nOpcion 2: tabla de multiplicar"
                     + "\nOpcion 3: contraseña"
                     + "\nOpcion 4: Palindromo"
-                    + "\nOpcion 5: conversion de grados ");
+                    + "\nOpcion 5: conversion de grados"
+                    + "\nOpcion 6: adivina el numero"
+                    + "\nOpcion 7: ordenamiento de numeros (Burbuja) ");
             opcion= sc.nextInt();
             switch(opcion){
                 case 0:
@@ -78,7 +80,19 @@ public class Actividad_1 {
             gra.grados();
         }while (opcion1!=0);
                     break;
-                    
+                case 6:
+                    numeros arre =new numeros();
+                    int num;
+                    System.out.println("Introdusca un digito para saber si esta dentro del arreglo aleatorio de 10 elementos");
+                    num=sc.nextInt();
+                    arre.set_num(num);
+                    arre.arreglo();
+                    break;
+                case 7:
+                    numeros burbu =new numeros ();
+                    System.out.println("Burbuja");
+                    burbu.burbuja();
+                    break;
                 default :
                     System.out.println("Opcion invalida");
                     break;
