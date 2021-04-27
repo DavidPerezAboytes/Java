@@ -3,6 +3,7 @@ package actividad_1;
 
 import POJO.numeros;
 import POJO.palabras;
+import POJO.vehiculo;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -19,7 +20,8 @@ public class Actividad_1 {
                     + "\nOpcion 4: Palindromo"
                     + "\nOpcion 5: conversion de grados"
                     + "\nOpcion 6: adivina el numero"
-                    + "\nOpcion 7: ordenamiento de numeros (Burbuja) ");
+                    + "\nOpcion 7: ordenamiento de numeros (Burbuja)"
+                    + "\nOpcion 8: Clases ");
             opcion= sc.nextInt();
             switch(opcion){
                 case 0:
@@ -92,6 +94,29 @@ public class Actividad_1 {
                     numeros burbu =new numeros ();
                     System.out.println("Burbuja");
                     burbu.burbuja();
+                    break;
+                case 8:
+                    System.out.println("Uso de clases");
+                    System.out.println("Clase vehiculo"
+                            + "Objeto 1: bicicleta"
+                            + "Objeto 2: carro"
+                            + "Objeto 3: avion");
+                    vehiculo bicicleta =new vehiculo("EMtb","negro","Specialized");
+                    vehiculo carro =new vehiculo("Golf GTI","Blanco","VolksWagen");
+                    vehiculo avion =new vehiculo("Boeing 737","Blanco","Boeing");
+                    
+                    System.out.println("Objeto 1"
+                            + "\n Nombre: "+ bicicleta.get_nombre()
+                            + "\n Color:  "+ bicicleta.get_color()
+                            + "\n Marca:  "+ bicicleta.get_marca());
+                    System.out.println("Objeto 2"
+                            + "\n Nombre: "+ carro.get_nombre()
+                            + "\n Color:  "+ carro.get_color()
+                            + "\n Marca:  "+ carro.get_marca());
+                    System.out.println("Objeto 3"
+                            + "\n Nombre: "+ avion.get_nombre()
+                            + "\n Color:  "+ avion.get_color()
+                            + "\n Marca:  "+ avion.get_marca());
                     break;
                 default :
                     System.out.println("Opcion invalida");
