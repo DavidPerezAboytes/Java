@@ -1,6 +1,7 @@
 
 package actividad_1;
 
+import POJO.calculadora;
 import POJO.numeros;
 import POJO.palabras;
 import POJO.vehiculo;
@@ -21,7 +22,10 @@ public class Actividad_1 {
                     + "\nOpcion 5: conversion de grados"
                     + "\nOpcion 6: adivina el numero"
                     + "\nOpcion 7: ordenamiento de numeros (Burbuja)"
-                    + "\nOpcion 8: Clases ");
+                    + "\nOpcion 8: Clases"
+                    + "\nOpcion 9:"
+                    + "\nOpcion 10: calculadora"
+                    + "\nOpcion 0: Salir");
             opcion= sc.nextInt();
             switch(opcion){
                 case 0:
@@ -41,10 +45,8 @@ public class Actividad_1 {
                 case 2:
                     numeros eje2=new numeros();
                     int n1,n2;
-                    System.out.println("introduce 2 digitos:\n");
+                    System.out.println("introduce un digito:\n");
                     n1=sc.nextInt();
-                    n2=sc.nextInt();
-                    eje2.set_num(n2);
                     eje2.set_num1(n1);
                     eje2.tabla();
                     break;
@@ -117,6 +119,62 @@ public class Actividad_1 {
                             + "\n Nombre: "+ avion.get_nombre()
                             + "\n Color:  "+ avion.get_color()
                             + "\n Marca:  "+ avion.get_marca());
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    System.out.println("Bienvenido a una calculadora ");
+                    int t;
+                    int a;
+                    int b;
+                    calculadora cal=new calculadora();
+                    do{
+                        System.out.println("introduce una opcion: "
+                                + "\nOpcion 1: suma"
+                                + "\nOpcion 2: resta"
+                                + "\nOpcion 3: multiplicacion"
+                                + "\nOpcion 4: division"
+                                + "\nOpcion 0: Salir ");
+                        t=sc.nextInt();
+                        switch(t){
+                            case 1:
+                                a=sc.nextInt();
+                                b=sc.nextInt();
+                                cal.set_a(a);
+                                cal.set_b(b);
+                                cal.suma();
+                                System.out.println("resultado:"+cal.get_suma());
+                                break;
+                            case 2:
+                                a=sc.nextInt();
+                                b=sc.nextInt();
+                                cal.set_a(a);
+                                cal.set_b(b);
+                                cal.resta();
+                                System.out.println("resultado:"+cal.get_resta());
+                                break;
+                            case 3:
+                                a=sc.nextInt();
+                                b=sc.nextInt();
+                                cal.set_a(a);
+                                cal.set_b(b);
+                                cal.mult();
+                                System.out.println("resultado:"+cal.get_mult());
+                                break;
+                            case 4:
+                                a=sc.nextInt();
+                                b=sc.nextInt();
+                                cal.set_a(a);
+                                cal.set_b(b);
+                                cal.div();
+                                System.out.println("resultado:"+cal.get_div());
+                                break;
+                            case 5:
+                                break;
+                            case 0:
+                                break;
+                        }
+                    }while (t!=0);
                     break;
                 default :
                     System.out.println("Opcion invalida");

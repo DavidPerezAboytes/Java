@@ -28,7 +28,7 @@ public class numeros {
     }
     public void tabla(){
         for (int i=1;i<=num1;i++){
-            for(int j=1;j<=num;j++){
+            for(int j=1;j<=10;j++){
                 System.out.println(i+"x"+j+"="+i*j);
             }
             System.out.println();
@@ -108,14 +108,17 @@ public class numeros {
             int n=rnd.nextInt(1000);
             arr[y]=n;
         }
-        
+        arr[5]=5;
         int aux=0;
+        int pos=0;
         for (int x=0;x<10;x++){
             if (arr[x]==num){
                 aux=1;
+                pos=x+1;
             }}
+        
             if (aux==1)
-                System.out.println("el numero esta en el arreglo"); 
+                System.out.println("el numero esta en el arreglo en el puesto: "+(pos)); 
             else
                 System.out.println("el numero No esta en el arreglo");
         }
