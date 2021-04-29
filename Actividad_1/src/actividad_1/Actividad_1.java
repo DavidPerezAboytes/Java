@@ -2,8 +2,11 @@
 package actividad_1;
 
 import POJO.calculadora;
+import POJO.cuadrado;
 import POJO.numeros;
 import POJO.palabras;
+import POJO.rectangulo;
+import POJO.triangulo;
 import POJO.vehiculo;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -23,7 +26,7 @@ public class Actividad_1 {
                     + "\nOpcion 6: adivina el numero"
                     + "\nOpcion 7: ordenamiento de numeros (Burbuja)"
                     + "\nOpcion 8: Clases"
-                    + "\nOpcion 9:"
+                    + "\nOpcion 9: Herencia con figuras"
                     + "\nOpcion 10: calculadora"
                     + "\nOpcion 0: Salir");
             opcion= sc.nextInt();
@@ -121,6 +124,24 @@ public class Actividad_1 {
                             + "\n Marca:  "+ avion.get_marca());
                     break;
                 case 9:
+                    cuadrado cu = new cuadrado(5);
+                    rectangulo rec =new rectangulo(3,7);
+                    triangulo tri =new triangulo(4,5);
+                    System.out.println("Clase fuguras:");
+                    System.out.println("Cuadrado:");
+                    cu.perimetro();
+
+                    cu.area();
+                    
+                    System.out.println("Rectangulo:");
+                    rec.perimetro();;
+
+                    rec.area();
+                    
+                    System.out.println("Triangulo:");
+                    tri.perimetro();
+
+                    tri.area();
                     break;
                 case 10:
                     System.out.println("Bienvenido a una calculadora ");

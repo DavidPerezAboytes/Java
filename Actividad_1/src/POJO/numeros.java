@@ -108,7 +108,6 @@ public class numeros {
             int n=rnd.nextInt(1000);
             arr[y]=n;
         }
-        arr[5]=5;
         int aux=0;
         int pos=0;
         for (int x=0;x<10;x++){
@@ -149,5 +148,3 @@ public class numeros {
         System.out.println();
     }
     }
-    
-
